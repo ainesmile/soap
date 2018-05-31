@@ -1,0 +1,27 @@
+{
+    "name": "goodsite",
+    "description": "kiwigoods e-store",
+    "main": "index.js",
+    "authors": [
+      "ainesmile"
+    ],
+    "license": "ISC",
+    "keywords": [
+      "kiwigoods",
+      "nz"
+    ],
+    "homepage": "",
+    "ignore": [
+      "**/.*",
+      "node_modules",
+      "bower_components",
+      "test",
+      "tests"
+    ],
+    "dependencies": {
+      "bootstrap": "^4.1.0",
+      "jquery": "^3.3.1",
+      "open-iconic": "https://github.com/iconic/open-iconic.git"
+    }
+  }
+  

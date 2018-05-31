@@ -1,0 +1,28 @@
+{% extends '../base.html' %}
+
+{% block main %}
+
+    {% include 'global_nav.html' %}
+    
+    <div class="container-fluid">
+        <div class="container">
+            {% include './nav.html' %}
+            {% include './carousel.html' %}
+        </div>
+    </div>
+    
+    <br>
+    <div class="container-fluid">
+        <div class="container">
+            <h2 class="text-center">推荐产品</h2>
+            {% include './featured_products.html' %}
+            {% include './featured_products.html' %}
+            {% include './featured_products.html' %}
+        </div>
+    </div>
+    <br>
+    <br>
+    
+    {% include 'footer.html' %}
+    
+{% endblock %}
