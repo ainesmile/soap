@@ -3,12 +3,37 @@
 <div class="container-fluid bg-light">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="true" aria-label="menu">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             
             <a class="navbar-brand" href="#">Kiwigoods</a>
+
+            <div class="navbar__menu">
+                <div class="collapse navigation bg-light" id="navbarNav">
+                    <div class="d-flex justify-content-between">
+                        <img src="{% static 'libs/open-iconic/svg/menu.svg' %}" alt="menu" width="30" height="30" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="navbarNav">
+                        <img src="{% static 'libs/open-iconic/svg/person.svg' %}" alt="person" width="30" height="30">   
+                    </div>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">母婴用品</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">营养保健</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">护肤用品</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">畅销食品</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
 
             <a class="text-dark" href="">
                 <img src="{% static 'libs/open-iconic/svg/cart.svg' %}" alt="cart" width="30" height="30"/>

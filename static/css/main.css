@@ -1,0 +1,54 @@
+
+
+.body {
+    font-size: 1rem;
+}
+
+.breadcrumb {
+    font-size: 16px;
+}
+
+.breadcrumb {
+    background-color: white;
+}
+
+.footer {
+    border-top: 1px dashed #ddd;
+    margin-top: 40px 0 20px 0;
+    padding-top: 6px;
+    overflow: hidden;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.form-control, .input-group-text {
+    background-color: #ffffff;
+    border: 1px solid #d3d1d0;
+    border-radius: 0;
+    border-color: #28a745;
+}
+
+
+@media (max-width: 767.98px) {
+    .navbar__menu .navigation {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 160px;
+        /* z-index: 1; */
+        background-color: white;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 1rem;
+        -webkit-transition: height .3s;
+        transition: height .3s;
+        left: 0;
+        box-shadow: 1px 1px 10px 1px #d3d1d0;
+    }
+
+    .navbar__menu .navbar-nav {
+        padding-top: 0.3rem;
+    }
+}
