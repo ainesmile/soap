@@ -1,22 +1,22 @@
-
-
-.body {
-    font-size: 1rem;
+body {
+    position: relative;
+    margin: 0;
 }
+.footer {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    zoom: 1;
+    font-size: 0.8em;
+    border-top: 1px dashed #ddd;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
 
 .breadcrumb {
     font-size: 16px;
-}
-
-.breadcrumb {
     background-color: white;
-}
-
-.footer {
-    border-top: 1px dashed #ddd;
-    margin-top: 40px 0 20px 0;
-    padding-top: 6px;
-    overflow: hidden;
 }
 
 a:hover {
@@ -30,6 +30,32 @@ a:hover {
     border-color: #28a745;
 }
 
+.line-through {
+    text-decoration: line-through;
+}
+
+.variant-picker {
+    border: 1px solid #ddd;
+    border-radius: 0;
+}
+.variant-picker input {
+    display: none;
+}
+
+.variant-picker.active {
+    background-color: #e6e6e6;
+}
+
+.btn-outline-secondary {
+    height: 1.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+div.product-details {
+    padding-bottom: 0.5rem;
+}
+
 
 @media (max-width: 767.98px) {
     .navbar__menu .navigation {
@@ -37,7 +63,7 @@ a:hover {
         top: 0px;
         left: 0px;
         width: 160px;
-        /* z-index: 1; */
+        z-index: 1;
         background-color: white;
         padding-left: 1rem;
         padding-right: 1rem;
