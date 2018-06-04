@@ -1,0 +1,27 @@
+{% extends '../base.html' %}
+
+{% block main %}
+
+    {% include 'nav_menu.html' %}
+    
+    {% include 'product/breadcrumb.html' %}
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-12">
+                    {% include 'product/carousel.html' %}
+                </div>
+
+                <div class="col-md-6 offset-md-1 col-12">
+                    {% include 'product/detail-info.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    
+{% endblock %}

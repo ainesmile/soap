@@ -1,0 +1,50 @@
+{% load static %}
+
+<div>
+    <h1>Ecostore 婴儿山羊肥皂Ecostore 婴儿山肥皂</h1>
+
+    <div>
+        <h3>
+            <span>$31.30</span>
+            <small class="line-through">$34.77</small>
+        </h3>
+    </div>
+
+    <div class="product-details">
+        <p>Candy Box Size</p>
+
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn bg-white- variant-picker">
+                <input type="radio" name="12" value="on" checked="">
+                Left
+            </label>
+            <label class="btn variant-picker">
+                <input type="radio" name="11" value="on">
+                Middle
+            </label>
+            <label class="btn variant-picker">
+                <input type="radio" name="10" value="on">
+                Right
+            </label>
+        </div>
+    </div>
+
+    <form>
+        <div class="input-group quantity-form product-details">
+            <div class="input-group-prepend quantity-form-button">
+                <label class="control-label" for="quantity">数量：</label> 
+                <button class="btn btn-outline-secondary bg-light" type="button">
+                    <img src="{% static 'libs/open-iconic/svg/minus.svg' %}" />
+                </button>
+                <button class="btn btn-sm- btn-outline-secondary" type="button">3</button>
+                <button class="btn btn-sm- btn-outline-secondary bg-light" type="button">
+                    <img src="{% static 'libs/open-iconic/svg/plus.svg' %}" />
+                </button>
+            </div>
+        </div>
+        <button class="btn btn-sm- btn-info btn-add-cart" type="button">加入购物车</button>
+    </form>
+
+</div>
+    
+    
