@@ -1,3 +1,4 @@
 from django.contrib import admin
+from product.models import Featured
 
-# Register your models here.
+admin.site.register(Featured)
