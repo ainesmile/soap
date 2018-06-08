@@ -1,10 +1,10 @@
 from django.views import View
 from django.views.generic.base import TemplateView
+from django.shortcuts import render 
+from django.http import HttpResponse
+from product.models import Featured
 
-class Home(TemplateView):
-    template_name = 'home.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['title'] = 'Home Page'
-        return context
+class Home(View):
+    def get(self, requset):
+        featured = Featured.objects.all()
+        return render(requset, 'core/home.html', {"featured": featured})
