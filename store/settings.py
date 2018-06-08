@@ -3,7 +3,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # BASE_DIR = '/Users/ainesmile/programmer/soap/store'
 
-SECRET_KEY = SECRET_KEY = os.environ.get('SECRET_KEY', 'uwokqqufc3wv5rl-a5emcqsx+h@%6p+-dkmofnuw(=0#5oojne')
+SECRET_KEY = os.environ.get('SECRET_KEY', 'uwokqqufc3wv5rl-a5emcqsx+h@%6p+-dkmofnuw(=0#5oojne')
 
 DEBUG = os.environ.get('DEBUG', True)
 
@@ -28,7 +28,7 @@ MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', ['127.0.0.1'])
 
 
 INSTALLED_APPS = [
@@ -69,11 +69,14 @@ TEMPLATES = [
 ]
 
 
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': os.environ.get(DB_ENGINE, 'django.db.backends.sqlite3'),
+        'NAME': os.environ.get(DB_NAME, os.path.join(BASE_DIR, 'db.sqlite3')),
+        'USER': os.environ.get(DB_USER),
+        'PASSWORD': os.environ.get(DB_PASSWORD),
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
