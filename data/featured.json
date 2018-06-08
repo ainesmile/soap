@@ -1,0 +1,92 @@
+{   
+    "ProteinPowder": [
+        {
+            "name": "Musashi Protein Powder Chocolate",
+            "fixed_price": "59.99",
+            "discounted_price": "59.99",
+            "pic_name": "Musashi-Protein-Powder-Chocolate.jpg",
+            "size": "900g"
+        },
+        {
+            "name": "Musashi Protein Powder Shred And Burn",
+            "fixed_price": "59.99",
+            "discounted_price": "59.99",
+            "pic_name": "Musashi-Protein-Powder-Shred-And-Burn.jpg",
+            "size": "714g"
+        },
+        {
+            "name": "Aussie Bodies Protein Fx Protein Shake 100% Whey Chocolate Powder",
+            "fixed_price": "49.99",
+            "discounted_price": "49.99",
+            "pic_name": "Aussie-Protein-Powder-Chocolate.jpg",
+            "size": "700g"
+        },
+        {
+            "name": "Anchor Protein Plus Protein Powder Smoothie Booster Strawberry",
+            "fixed_price": "20.00",
+            "discounted_price": "20.00",
+            "pic_name": "Anchor-Protein-Powder-Strawberry.jpg",
+            "size": "375g"
+        }
+    ],
+    "Bioglan": [
+        {
+            "name": "Bioglan Kids Smart Kids Multi Gummies With Omega 3",
+            "fixed_price": "18.99",
+            "discounted_price": "18.99",
+            "pic_name": "Bioglan-Vita-Gummies-Omega-3.png",
+            "size": "60pk"
+        },
+        {
+            "name": "Bioglan Kids Smart Kids Multi Complete",
+            "fixed_price": "21.99",
+            "discounted_price": "21.99",
+            "pic_name": "Bioglan-Multi-Complete.png",
+            "size": "50pk"
+        },
+        {
+            "name": "Bioglan Kids Smart Fish Oil Trio",
+            "fixed_price": "23.49",
+            "discounted_price": "23.49",
+            "pic_name": "Bioglan-Omega-3-Fish-Oil-Trio.png",
+            "size": "60pk"
+        },
+        {
+            "name": "Bioglan Kids Smart Fish Oil Omega 3",
+            "fixed_price": "39.99",
+            "discounted_price": "39.99",
+            "pic_name": "Bioglan-Omega-3-Fish-Oil.png",
+            "size": "125pk"
+        }
+    ],
+    "ManukaHoney": [
+        {
+            "name": "Arataki Manuka Honey Umf 10+",
+            "fixed_price": "21.49",
+            "discounted_price": "21.49",
+            "pic_name": "Arataki-Manuka-Honey-Umf-10+.png",
+            "size": "250g"
+        },
+        {
+            "name": "Arataki Manuka Honey Umf 5+",
+            "fixed_price": "29.99",
+            "discounted_price": "29.99",
+            "pic_name": "Arataki-Manuka-Honey-Umf-5+.jpg",
+            "size": "500g"
+        },
+        {
+            "name": "Mother Earth Manuka Honey Umf 5+",
+            "fixed_price": "27.99",
+            "discounted_price": "27.99",
+            "pic_name": "Mother-Earth-Manuka-Honey-Umf-5+.jpg",
+            "size": "500g"
+        },
+        {
+            "name": "Comvita Manuka Honey Umf 5+",
+            "fixed_price": "32.99",
+            "discounted_price": "32.99",
+            "pic_name": "Comvita-Manuka-Honey-Umf-5+.jpg",
+            "size": "500g"
+        }
+    ]
+}
