@@ -2,10 +2,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # BASE_DIR = '/Users/ainesmile/programmer/soap/store'
-
-SECRET_KEY = os.environ.get('SECRET_KEY', 'uwokqqufc3wv5rl-a5emcqsx+h@%6p+-dkmofnuw(=0#5oojne')
-
-DEBUG = os.environ.get('DEBUG', True)
+PROJECT_DIR = os.path.dirname(BASE_DIR)
 
 WSGI_APPLICATION = 'store.wsgi.application'
 
@@ -23,12 +20,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_ROOT = os.path.join(PROJECT_DIR, "media")
 MEDIA_URL = '/media/'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
-
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', ['127.0.0.1'])
+STATICFILES_DIRS = [os.path.join(PROJECT_DIR, "static")]
 
 
 INSTALLED_APPS = [
@@ -55,7 +50,7 @@ MIDDLEWARE = [
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(PROJECT_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -71,10 +66,10 @@ TEMPLATES = [
 
 DATABASES = {
     'default': {
-        'ENGINE': os.environ.get(DB_ENGINE, 'django.db.backends.sqlite3'),
-        'NAME': os.environ.get(DB_NAME, os.path.join(BASE_DIR, 'db.sqlite3')),
-        'USER': os.environ.get(DB_USER),
-        'PASSWORD': os.environ.get(DB_PASSWORD),
+        'ENGINE': os.environ.get('DB_ENGINE', 'django.db.backends.sqlite3'),
+        'NAME': os.environ.get('DB_NAME', os.path.join(PROJECT_DIR, 'db.sqlite3')),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
         'HOST': 'localhost',
         'PORT': '',
     }
