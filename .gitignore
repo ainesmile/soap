@@ -1,6 +1,7 @@
 venv/
 .DS_Store
 __pycache__
+.pytest_cache/
 db.sqlite3
 static/libs
 images/
