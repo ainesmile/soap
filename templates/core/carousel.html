@@ -5,15 +5,19 @@
         <div id="bannerCarouselControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <a href="#">
+                    <a href="{% url 'products' 'best' 'Ecostore' %}">
                         <img class="d-block w-100" src="{% static 'images/ecostore-banner.jpg' %}" alt="Eco Store">
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="{% static 'images/swisse-banner.png' %}" alt="Swisse">
+                    <a href="{% url 'products' 'best' 'Swisse' %}">
+                        <img class="d-block w-100" src="{% static 'images/swisse-banner.png' %}" alt="Swisse">
+                    </a>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="{% static 'images/peanut-banner.png' %}" alt="Pic's Peanut Butter">
+                    <a href="{% url 'products' 'best' 'Pics' %}">
+                        <img class="d-block w-100" src="{% static 'images/peanut-banner.png' %}" alt="Pic's Peanut Butter">
+                    </a>
                 </div>
             </div>
             <a class="carousel-control-prev" href="#bannerCarouselControls" role="button" data-slide="prev">
