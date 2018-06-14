@@ -7,7 +7,7 @@ class Product(models.Model):
         ('N', 'Normal')
     )
     category = models.CharField(max_length=1, choices=CATEGORY_CHOICES)
-    name = models.CharField(max_length=200, unique=True)
+    name = models.CharField(max_length=200)
     fixed_price = models.FloatField(null=True)
     discounted_price = models.FloatField(null=True)
     pic_name = models.CharField(max_length=300)
