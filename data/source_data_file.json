@@ -1,0 +1,16 @@
+[
+    {
+        "url": "https://shop.countdown.co.nz/shop/searchproducts?search=pics",
+        "category": "B",
+        "subcategory": "Pics",
+        "file_name": "data/best_pics.json",
+        "img_saved_base_dir": "static/images/best/"
+    },
+    {
+        "url": "https://shop.countdown.co.nz/shop/searchproducts?search=swisse",
+        "category": "B",
+        "subcategory": "Swisse",
+        "file_name": "data/best_swisse.json",
+        "img_saved_base_dir": "static/images/best/"
+    }
+]
