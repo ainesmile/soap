@@ -1,0 +1,16 @@
+{% extends '../base.html' %}
+
+{% block main %}
+
+    {% include 'nav_menu.html' %}
+
+    {% include 'product/breadcrumb.html' %}
+
+    <div class="container-fluid">
+        <div class="container">
+            {% include 'product_list.html' %}
+            {% include './product_paginator.html' %}
+        </div>
+    </div>
+    
+{% endblock %}

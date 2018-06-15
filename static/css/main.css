@@ -96,3 +96,7 @@ div.product-details {
 .product-list {
     border: none;
 }
+/* pagination */
+.step-links {
+    padding: 0 1rem 0 1rem;
+}

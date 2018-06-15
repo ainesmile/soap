@@ -1,0 +1,18 @@
+{% load static %}
+
+<div class="pagination text-success float-right">
+    <span class="step-links">
+        {% if product_list.has_previous %}
+            <a href="?page={{product_list.previous_page_number}}" class="text-success">&laquo;</a>
+        {% endif %}
+    </span>
+    <span class="current">
+        {{ product_list.number }}
+    </span>
+
+    <span class="step-links">
+        {% if product_list.has_next %}
+            <a href="?page={{ product_list.next_page_number }}" class="text-success">&raquo;</a>
+        {% endif %}
+    </span>
+</div>
