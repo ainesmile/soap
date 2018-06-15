@@ -49,7 +49,7 @@ def test_get_img_urls():
     assert fetch_product._get_img_urls(tree) == data["e_img_urls"]
 
 
-
-
+def test_cal_page_urls():
+    assert fetch_product._cal_page_urls(tree, 'first_page_url') == ['first_page_url&page=1']
 
 

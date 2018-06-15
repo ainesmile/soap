@@ -56,39 +56,59 @@ def save_imgs(img_saved_base_dir, img_names, img_urls):
     for i in range(len(img_urls)):
         img_dir = img_saved_base_dir + img_names[i]
         _save_img(img_dir, img_urls[i])
-        sleep(1)
+        sleep(0.5)
 
-
-def save_single_page_data(url, category, subcategory, products_save_file_name, img_saved_base_dir):
-
+def get_single_url_data(url, category, subcategory):
     page = requests.get(url)
     tree = html.fromstring(page.content).xpath('//div[@id="product-list"]')[0]
-
-    # with open('pics.html', 'r') as f:
-    #     tree = html.fromstring(f.read()).xpath('//div[@id="product-list"]')[0]
 
     names, sizes, names_with_size = get_names_and_sizes(tree)
     prices = get_prices(tree)
     img_names_with_size = get_img_names_with_size(names_with_size)
     img_urls = _get_img_urls(tree)
     _assert_fetch_data(names_with_size, sizes, prices, img_names_with_size, img_urls)
-
-
     products = get_products(names, sizes, prices, img_names_with_size, category, subcategory)
+    print('fetched ', len(products), ' products', ' with ', url)
+    sleep(0.5)
+    return (products, img_names_with_size, img_urls)
+
+def save_single_subcategory_data(url, category, subcategory, products_save_file_name, img_saved_base_dir):
+    page = requests.get(url)
+    tree = html.fromstring(page.content).xpath('//div[@id="product-list"]')[0]
+
+    # with open('data/pics.html', 'r') as f:
+    #     tree = html.fromstring(f.read()).xpath('//div[@id="product-list"]')[0]
+
+    page_urls = _cal_page_urls(tree, url)
+
+    products = []
+    img_urls = []
+    img_names_with_size = []
+
+    print("page_urls", page_urls)
+
+    for page_url in page_urls:
+        page_products, page_img_names_with_size, page_img_urls = get_single_url_data(page_url, category, subcategory)
+        products.extend(page_products)
+        img_names_with_size.extend(page_img_names_with_size)
+        img_urls.extend(page_img_urls)
+
+    _assert_subcategory_data(products, img_names_with_size, img_urls)
+
     save_products_to_file(products, products_save_file_name)
-
     save_imgs(img_saved_base_dir, img_names_with_size, img_urls)
+    
 
 
-def save_pages_data(source_data):
+def save_category_data(source_data):
     for page_source in source_data:
         url = page_source["url"]
         category = page_source["category"]
         subcategory = page_source["subcategory"]
         file_name = page_source["file_name"]
         img_saved_base_dir = page_source["img_saved_base_dir"]
-        
-        save_single_page_data(url, category, subcategory, file_name, img_saved_base_dir)
+
+        save_single_subcategory_data(url, category, subcategory, file_name, img_saved_base_dir)
         
 def _get_striped_content(content):
     striped_content = []
@@ -133,7 +153,6 @@ def _get_img_urls(tree):
 
 def _save_img(img_dir, img_url):
     img_data = requests.get(img_url).content
-    # file_name = 'static/images/product/' + img_name
     with open(img_dir, 'wb') as handler:
         handler.write(img_data)
 
@@ -142,7 +161,23 @@ def _assert_fetch_data(names_with_size, sizes, prices, img_names_with_size, img_
     assert len(names_with_size) == len(set(names_with_size))
     assert len(names_with_size) == len(sizes) == len(prices) == len(img_names_with_size) == len(img_urls)
 
+def _assert_subcategory_data(products, img_names_with_size, img_urls):
+    assert len(products) == len(img_names_with_size) == len(img_urls)
+
+def _cal_page_urls(tree, first_page_url):
+    pages = []
     
+    paging_ele = tree.xpath('//div[@class="paging-description hidden-tablet "]/text()')[0]
+    paging = int(paging_ele.split(' ')[0])
+
+    item_per_page = 24
+    page_number = int(paging / item_per_page) + 1
+    for i in range(page_number):
+        post_fix = '&page=' + str(i + 1)
+        url = first_page_url + post_fix
+        pages.append(url)
+    return pages
+
 
 class Command(BaseCommand):
     def add_arguments(self, parser):
@@ -154,7 +189,7 @@ class Command(BaseCommand):
         with open(source_data_file, 'r') as source_file:
             source_data = json.loads(source_file.read())
         
-        save_pages_data(source_data)
+        save_category_data(source_data)
 
         self.stdout.write('Successfully saved.')
 
