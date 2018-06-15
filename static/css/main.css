@@ -74,6 +74,12 @@ div.product-details {
         box-shadow: 1px 1px 10px 1px #d3d1d0;
     }
 
+    .navbar-toggler {
+        font-size: 1rem;
+        padding: 0 0.25rem;
+        margin-right: 0.25rem;
+    }
+
     .navbar__menu .navbar-nav {
         padding-top: 0.3rem;
     }
