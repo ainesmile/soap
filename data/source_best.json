@@ -4,13 +4,20 @@
         "category": "B",
         "subcategory": "Pics",
         "file_name": "data/best_pics.json",
-        "img_saved_base_dir": "static/images/best/"
+        "img_saved_base_dir": "media/best/"
     },
     {
         "url": "https://shop.countdown.co.nz/shop/searchproducts?search=swisse",
         "category": "B",
         "subcategory": "Swisse",
         "file_name": "data/best_swisse.json",
-        "img_saved_base_dir": "static/images/best/"
+        "img_saved_base_dir": "media/best/"
+    },
+    {
+        "url": "https://shop.countdown.co.nz/shop/searchproducts?search=ecostore",
+        "category": "B",
+        "subcategory": "Ecostore",
+        "file_name": "data/best_ecostore.json",
+        "img_saved_base_dir": "media/best/"
     }
 ]
