@@ -3,10 +3,10 @@
     <div class="container">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{% url 'home' %}" class="text-info">首页</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'home' %}">首页</a></li>
                 {% for breadcrumb_cn_name in breadcrumb_cn_names %}
-                    <li class="breadcrumb-item active text-info" aria-current="page">
-                        <a href="" class="text-info">{{breadcrumb_cn_name}}</a>
+                    <li class="breadcrumb-item" aria-current="page">
+                        <a href="">{{breadcrumb_cn_name}}</a>
                     </li>
                 {% endfor %}
             </ol>

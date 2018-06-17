@@ -13,12 +13,6 @@ body {
     margin-top: 2rem;
 }
 
-
-.breadcrumb {
-    font-size: 16px;
-    background-color: white;
-}
-
 a:hover {
     text-decoration: none;
 }
@@ -105,4 +99,17 @@ div.product-details {
 /* pagination */
 .step-links {
     padding: 0 1rem 0 1rem;
+}
+
+/* breadcrumb */
+.breadcrumb {
+    font-size: 16px;
+    background-color: white;
+    
+}
+li.breadcrumb-item a {
+    color: #17a2b8;
+}
+li.breadcrumb-item:last-child a {
+    color: black;
 }
