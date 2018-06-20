@@ -1,0 +1,26 @@
+[
+    {
+        "base_url": "https://shop.countdown.co.nz/shop/browse/baby-care/",
+        "urls": {
+            "other-baby-foods": ["other-baby-foods"],
+            "baby-food-from-4-mths": ["baby-food-from-4-mths"]
+        },
+        "category": "N",
+        "subcategory": "Babycare",
+        "category_3": "babyfoods",
+        "file_name": "data/babycare.json",
+        "img_saved_base_dir": "media/normal/babycare/"
+    },
+    {
+        "base_url": "https://shop.countdown.co.nz/shop/browse/baby-care/baby-toiletries/",
+        "urls": {
+            "baby-bath": ["baby-bath"],
+            "baby-cream-lotion": ["baby-cream", "baby-lotion", "body-lotion", "dermexa"]
+        },
+        "category": "N",
+        "subcategory": "Babycare",
+        "category_3": "babytoiletries",
+        "file_name": "data/babycare.json",
+        "img_saved_base_dir": "media/normal/babycare/"
+    }
+]

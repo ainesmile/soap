@@ -1,0 +1,95 @@
+[
+    {
+        "base_url": "https://shop.countdown.co.nz/shop/browse/baby-care/",
+        "urls": {
+            "other-baby-foods": ["other-baby-foods"],
+            "baby-food-from-4-mths": ["baby-food-from-4-mths"],
+            "baby-food-from-6-mths": ["baby-food-from-6-mths"],
+            "baby-food-from-9-mths": ["baby-food-from-9-mths"],
+            "baby-food-one-year-": ["baby-food-one-year-"],
+            "baby-food-packet-meals": ["baby-food-packet-meals"]
+        },
+        "category": "N",
+        "subcategory": "Babycare",
+        "category_3": "babyfoods",
+        "file_name": "data/babycare.json",
+        "img_saved_base_dir": "media/normal/babycare/"
+    },
+    {
+        "base_url": "https://shop.countdown.co.nz/shop/browse/baby-care/baby-toiletries/",
+        "urls": {
+            "baby-bath": ["baby-bath"],
+            "baby-cream-lotion": ["baby-cream", "baby-lotion", "body-lotion", "dermexa"],
+            "baby-oil": ["baby-oil"],
+            "baby-powder": ["baby-powder", "talcum-powder"],
+            "baby-shampoo": ["baby-shampoo", "baby-shampoo-conditioner", "shampoo-conditioner"],
+            "baby-soap": ["baby-soap"],
+            "baby-wipes": ["baby-wipes"]
+        },
+        "category": "N",
+        "subcategory": "Babycare",
+        "category_3": "babytoiletries",
+        "file_name": "data/babycare.json",
+        "img_saved_base_dir": "media/normal/babycare/"
+    },
+    {
+        "base_url": "https://shop.countdown.co.nz/shop/browse/baby-care/medicinal-needs/",
+        "urls": {
+            "antiseptic": ["antiseptic"],
+            "baby-balsam": ["baby-balsam"],
+            "baby-thermometer": ["baby-thermometer"],
+            "gripe-water": ["gripe-water"],
+            "sleep-assistance": ["sleep-assistance"],
+            "teething-gel": ["teething-gel"]
+        },
+        "category": "N",
+        "subcategory": "Babycare",
+        "category_3": "medicinalneeds",
+        "file_name": "data/babycare.json",
+        "img_saved_base_dir": "media/normal/babycare/"
+    },
+    {
+        "base_url": "https://shop.countdown.co.nz/shop/browse/baby-care/baby-accessories/",
+        "urls": {
+            "baby-bath": ["baby-bath"],
+            "baby-blanket": ["baby-blanket", "baby-wrap"],
+            "baby-bottle-teats": ["baby-bottle", "teats"],
+            "baby-bowl": ["baby-bowl"],
+            "baby-cutlery": ["baby-cutlery"],
+            "baby-bibs": ["baby-bibs"],
+            "baby-change-mats": ["baby-change-mats"],
+            "baby-drinking-cup": ["baby-drinking-cup"],
+            "baby-feeding-system": ["baby-feeding-system"],
+            "baby-teether": ["baby-teether"],
+            "brush-comb-set": ["brush-comb-set"],
+            "comforters": ["comforters"]
+        },
+        "category": "N",
+        "subcategory": "Babycare",
+        "category_3": "babyaccessories",
+        "file_name": "data/babycare.json",
+        "img_saved_base_dir": "media/normal/babycare/"
+    },
+    {
+        "base_url": "https://shop.countdown.co.nz/shop/browse/baby-care/nappies-liners/",
+        "urls": {
+            "bed-wetting": ["bed-wetting"],
+            "crawler": ["crawler"],
+            "infant": ["infant"],
+            "junior": ["junior"],
+            "nappies": ["nappies"],
+            "nappy-bags": ["nappy-bags"],
+            "nappy-liners": ["nappy-liners"],
+            "nappy-pants": ["nappy-pants"],
+            "newborn": ["newborn"],
+            "swimmers": ["swimmers"],
+            "toddler": ["toddler"],
+            "walker": ["walker"]
+        },
+        "category": "N",
+        "subcategory": "Babycare",
+        "category_3": "nappiesliners",
+        "file_name": "data/babycare.json",
+        "img_saved_base_dir": "media/normal/babycare/"
+    }
+]
