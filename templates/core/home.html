@@ -2,17 +2,19 @@
 
 {% block main %}
 
-    
-    
     {% include 'nav_menu.html' %}
 
     {% include './carousel.html' %}
 
     <br>
-    {% include './featured_products.html' %}
+    <div class="container-fluid">
+        <div class="container">
+            <h2 class="text-center">推荐产品</h2>
+            <br>
+            {% include 'product_list.html' %}
+        </div>
+    </div>
     <br>
     <br>
-    
-    
     
 {% endblock %}
